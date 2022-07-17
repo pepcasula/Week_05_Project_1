@@ -23,3 +23,8 @@ def user_dev_menu():
 @users_blueprint.route("/user_adm")
 def user_adm_menu():
     return render_template("user_adm/index.html")
+
+@users_blueprint.route("/user_info")
+def get_all_users():
+    all_users = user_repository.select_all()
+    return render_template("user_info/index.html", all_users = all_users)

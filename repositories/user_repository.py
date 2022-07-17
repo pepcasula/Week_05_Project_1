@@ -23,7 +23,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        user = User(row['name'], row ['user_type'], row ['id'])
+        user = User(row['name'], row['user_type'], row['id'])
         users.append(user)
     return users
 

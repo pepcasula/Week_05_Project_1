@@ -38,6 +38,16 @@ user_repository.save(user6)
 user7 = User("Luis Perez", "Tech Support")
 user_repository.save(user7)
 
+product1 = Product("GeniusPDF")
+product_repository.save(product1)
 
+product2 = Product("Diamond Scan")
+product_repository.save(product2)
+
+product3 = Product("docuMental")
+product_repository.save(product3)
+
+product4 = Product("OmniConverter")
+product_repository.save(product4)
 
 pdb.set_trace()
