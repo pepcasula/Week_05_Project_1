@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>See all Bugs reported</h2>
+    <ul>
+    {% for bug in all_bugs %}
+            <li>{{ bug.id }} - {{ bug.product }} - First reported on {{ bug.first_submitted }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

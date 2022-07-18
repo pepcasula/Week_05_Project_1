@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Bug Info</h2>
+    <h2>Bug Info</h2>
+    <h3> A menu that probably will not be necessary.</h3>
 
-<p>This page will show a menu with different options to look into bug details, list them by product or status.</p>
-
+    <ul>
+        <!-- {% for bug in all_bugs %}
+            <li>{{ bug.id }} - {{ product.name }} - First reported on {{ bug.first_submitted }}</li>
+        {% endfor %} -->
+    </ul>
 {% endblock %}

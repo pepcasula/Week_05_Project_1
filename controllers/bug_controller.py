@@ -9,5 +9,10 @@ import repositories.user_repository as user_repository
 bugs_blueprint = Blueprint("bugs", __name__)
 
 @bugs_blueprint.route("/bug")
-def bug_info():
+def bug_menu():
     return render_template("/bug/index.html")
+
+@bugs_blueprint.route("/bug_info")
+def get_all_bugs():
+    all_bugs = bug_repository.select_all()
+    return render_template("/bug_info/index.html", all_bugs = all_bugs)

@@ -21,7 +21,15 @@ def select_all():
     products = []
     sql = "SELECT * FROM products"
     results = run_sql(sql)
-
     for row in results:
         product = Product(row['name'], row['id'])
         products.append(product)
+
+def select(id):
+    product = None
+    sql = "SELECT * FROM products WHERE ID = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        product = Product(result['name'], result['id'])
+        return product

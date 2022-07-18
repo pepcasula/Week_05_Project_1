@@ -24,7 +24,6 @@ def select_all():
     users = []
     sql = "SELECT * FROM users"
     results = run_sql(sql)
-
     for row in results:
         user = User(row['name'], row['user_type'], row['id'])
         users.append(user)
