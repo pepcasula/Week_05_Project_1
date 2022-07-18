@@ -11,7 +11,10 @@ import repositories.product_repository as product_repository
 
 def save(user):
     sql = "INSERT INTO users (name, user_type) VALUES (%s, %s) RETURNING *"
-    values = [user.name, user.user_type]
+    values = [
+        user.name,
+        user.user_type
+        ]
     results = run_sql(sql, values)
     id = results[0]['id']
     user.id = id

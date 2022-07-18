@@ -10,4 +10,4 @@ bugs_blueprint = Blueprint("bugs", __name__)
 
 @bugs_blueprint.route("/bug")
 def bug_info():
-    return render_template("bug/index.html")
+    return render_template("/bug/index.html")

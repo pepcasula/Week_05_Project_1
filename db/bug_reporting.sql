@@ -18,7 +18,7 @@ CREATE TABLE bugs (
     id SERIAL PRIMARY KEY,
     short_name VARCHAR(255),
     description VARCHAR(255),
-    product_id INT NOT NULL REFERENCES products(id) ,
+    product_id INT NOT NULL REFERENCES products(id),
     first_reported VARCHAR(255)
 );
 

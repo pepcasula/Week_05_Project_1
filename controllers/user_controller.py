@@ -24,6 +24,14 @@ def user_dev_menu():
 def user_adm_menu():
     return render_template("user_adm/index.html")
 
+@users_blueprint.route("/user_adm/user_new", methods=['POST'])
+def add_new_user():
+
+
+
+    
+    return render_template("user_new/user_new.html")
+
 @users_blueprint.route("/user_info")
 def get_all_users():
     all_users = user_repository.select_all()
