@@ -29,7 +29,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         product = product_repository.select(row["product_id"])
-        bug = Bug(row['short_name'], row['description'], product, row['first_reported'], row['id'])
+        bug = Bug(row['short_name'], row['description'], product.name, row['first_reported'], row['id'])
         bugs.append(bug)
     return bugs
 

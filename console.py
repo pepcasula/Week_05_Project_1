@@ -333,23 +333,23 @@ ticket18 = Ticket(
     )
 ticket_repository.save(ticket18)
 
-ticket19 = Ticket(
-    bug9,
-    product4,
-    "18 July 2022",
-    user4,
-    "Under review"
-    )
-ticket_repository.save(ticket19)
+# ticket19 = Ticket(
+#     bug9,
+#     product4,                    PRODUCT4 HAS NO BUGS ASSOCIATED!
+#     "18 July 2022",
+#     user4,
+#     "Under review"
+#     )
+# ticket_repository.save(ticket19)
 
-ticket20 = Ticket(
-    bug10,
-    product4,
-    "18 July 2022",
-    user2,
-    "New"
-    )
-ticket_repository.save(ticket20)
+# ticket20 = Ticket(
+#     bug10,
+#     product4,                     PRODUCT4 HAS NO BUGS ASSOCIATED!
+#     "18 July 2022",
+#     user2,
+#     "New"
+#     )
+# ticket_repository.save(ticket20)
 
 
 
