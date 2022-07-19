@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Blueprint, Flask, redirect, render_template, request
 
 from models.bug import Bug
@@ -16,3 +17,10 @@ def bug_menu():
 def get_all_bugs():
     all_bugs = bug_repository.select_all()
     return render_template("/bug_info/index.html", all_bugs = all_bugs)
+
+@bugs_blueprint.route("/bug_info/by_product", methods=['POST'])
+def get_by_product():
+    product = request.form['product']
+    all_bugs = bug_repository.select_all_by_product(product)
+    return render_template("/bug_info/by_product.html", all_bugs = all_bugs)
+

@@ -14,6 +14,18 @@
     <h3>Not really a sidebar right now</h3>
     <ul>
         <li><a href="/bug_info">Bugs list</a></li>
+        <li>
+            <form action="/bug_info/by_product" method="post">
+                <label for="products">Find by product:<br></label>
+                <select id="products" name="product">
+                  <option value="1">GeniusPDF</option>
+                  <option value="2">Diamond Scan</option>
+                  <option value="3">docuMental</option>
+                  <option value="4">Omniconverter</option>
+                </select>
+                <input type="submit">
+              </form>
+        </li>
         <li><a href="/">Known issues with GeniusPDF</a></li>
         <li><a href="/">Known issues with Diamond Scan</a></li>
         <li><a href="/">Known issues with docuMental</a></li>

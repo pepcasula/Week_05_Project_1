@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Known issues with product selected</h2>
+    <ul>
+    {% for bug in all_bugs %}
+            <li>{{ bug.id }} | {{ bug.product }} | {{ bug.short_name }} | First reported on {{ bug.first_reported }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

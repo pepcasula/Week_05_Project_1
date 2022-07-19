@@ -3,11 +3,57 @@
 
 <h2>System Admin Menu</h2>
 
-<ul>
-    <li><a href="">Create New User</a></li>
-    <li><a href="">Edit User</a></li>    
-    <li><a href="../user_info">See all Users</a></li>
-</ul>
+<h3>Create New User</h3>
+    
+    <form action="user_info/new" method="post">
+    <ul>
+        <li>
+            <label for="user-name">Name: </label>
+            <input type="text" name="name" id="user-name">
+        </li>
+        <li>
+            <label for="user-type">Access Level: </label>
+            <select name="type" id="user-type">
+                <option value="1">Tech Support</option>
+                <option value="1">Developer</option>
+                <option value="1">System Admin</option>
+            </select>
+        </li>
+    </ul>
+        <button>Submit</button>
+    </form>
+   
+
+    <h3>Edit User</h3>
+
+    
+    <!-- Should the methof for the form be 'update' rather than 'post'?? -->
+    <form action="user_info/edit" method="post">
+    <ul>
+        <li>
+            <label for="user-name">Name: </label>
+            <select name="name" id="user-name">
+                <option value="1">place2holder</option>
+                <option value="2">place2holder</option>
+            </select>
+        </li>
+        <li>
+            <label for="user-type">Access Level: </label>
+            <select name="type" id="user-type">
+                <option value="1">Tech Support</option>
+                <option value="2">Developer</option>
+                <option value="3">System Admin</option>
+            </select>
+        </li>
+    </ul>
+        <button>Submit</button>
+    </form>
+
+
+    <ul> 
+        <li><a href="../user_info">See all Users</a></li>
+        <li><a href="/">Back to the Home Page</a></li>
+    </ul>
 
 
 {% endblock %}
