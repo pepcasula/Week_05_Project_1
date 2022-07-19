@@ -22,3 +22,15 @@ def save(ticket):
     id = results[0]['id']
     ticket.id = id
     return ticket
+
+def select_all():
+    tickets = []
+    sql = "SELECT * FROM tickets"
+    results = run_sql(sql)
+    for row in results:
+        product = product_repository.select(row["product_id"])        
+        bug = bug_repository.select(row["bug_id"])
+        user = user_repository.select(row["user_id"])
+        ticket = Ticket(bug.short_name, product.name, row['date_subm'], user.name, row['ticket_status'], row['id'])
+        tickets.append(ticket)
+    return tickets

@@ -171,6 +171,14 @@ bug15 = Bug(
     )
 bug_repository.save(bug15)
 
+bug16 = Bug(
+    "Full screen view turnes the screen green",
+    "When setting the view to Full Screen mode the screen becomes green. Switching Full Screen mode off does not help.",
+    product4,
+    "16 July 2022"
+    )
+bug_repository.save(bug16)
+
 ticket1 = Ticket(
     bug11,
     product1,
@@ -333,24 +341,23 @@ ticket18 = Ticket(
     )
 ticket_repository.save(ticket18)
 
-# ticket19 = Ticket(
-#     bug9,
-#     product4,                    PRODUCT4 HAS NO BUGS ASSOCIATED!
-#     "18 July 2022",
-#     user4,
-#     "Under review"
-#     )
-# ticket_repository.save(ticket19)
+ticket19 = Ticket(
+    bug16,
+    product4,
+    "18 July 2022",
+    user4,
+    "Under review"
+    )
+ticket_repository.save(ticket19)
 
-# ticket20 = Ticket(
-#     bug10,
-#     product4,                     PRODUCT4 HAS NO BUGS ASSOCIATED!
-#     "18 July 2022",
-#     user2,
-#     "New"
-#     )
-# ticket_repository.save(ticket20)
-
+ticket20 = Ticket(
+    bug16,
+    product4,
+    "18 July 2022",
+    user2,
+    "New"
+    )
+ticket_repository.save(ticket20)
 
 
 pdb.set_trace()

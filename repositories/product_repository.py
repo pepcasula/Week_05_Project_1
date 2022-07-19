@@ -24,6 +24,7 @@ def select_all():
     for row in results:
         product = Product(row['name'], row['id'])
         products.append(product)
+    return products
 
 def select(id):
     product = None

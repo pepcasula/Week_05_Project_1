@@ -33,6 +33,16 @@ def select_all():
         bugs.append(bug)
     return bugs
 
+def select(id):
+    bug = None
+    sql = "SELECT * FROM bugs WHERE ID = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        product = product_repository.select(result["product_id"])
+        bug = Bug(result['short_name'], result['description'], product.name, result['first_reported'], result['id'])
+        return bug
+
 
 
 

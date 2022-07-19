@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Edit ticket</h2>
-
+    <h2>View tickets</h2>
+        <a href="/">See by User [selection menu]</a>
+        <a href="/">See by Bug [selection menu]</a>
+        <a href="/">See by Product [selection menu]</a>
+        
+    
+    {% for ticket in all_tickets %}
+        <ul>
+            <li>Ticket ref. n. {{ ticket.id }}</li>
+            <li>Created on {{ ticket.date_subm}}</li>
+            <li>Product: {{ ticket.product }}</li>
+            <li>Bug: {{ ticket.bug }}</li>
+            <li>User: {{ ticket.user }}</li>
+            <li>Status: {{ ticket.ticket_status }}</li>
+            <li><a href="/">Edit ticket</a></li>        
+        </ul>
+    {% endfor %}
+    </ul>
 {% endblock %}

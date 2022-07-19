@@ -10,5 +10,6 @@ tickets_blueprint = Blueprint("tickets", __name__)
 
 @tickets_blueprint.route("/ticket")
 def ticket_menu():
-    return render_template("ticket/index.html")
+    all_tickets = ticket_repository.select_all()
+    return render_template("/ticket/index.html", all_tickets = all_tickets)
 

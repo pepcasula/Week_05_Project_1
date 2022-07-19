@@ -29,4 +29,11 @@ def select_all():
         users.append(user)
     return users
 
-    
+def select(id):
+    user = None
+    sql = "SELECT * FROM users WHERE ID = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        user = User(result['name'], result['user_type'], result['id'])
+        return user 
