@@ -38,4 +38,11 @@ def select(id):
         user = User(result['name'], result['user_type'], result['id'])
         return user 
 
-    
+def update(user):
+    sql = "UPDATE users SET (name, user_type) = (%s, %s) WHERE id = %s"
+    values = [
+        user.name,
+        user.user_type,
+        user.id
+    ]
+    run_sql(sql, values)
