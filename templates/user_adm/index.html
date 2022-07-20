@@ -28,12 +28,12 @@
 
     
     <!-- Should the methof for the form be 'update' rather than 'post'?? -->
-    <form action="user_info/edit" method="update">
-        <input type="hidden" value="{{user_id}}" name="user_id">
+    <form action="user_info/edit" method="post">
+        <input type="hidden" value="{{user_id}}" name="user_id"/>
     <ul>
         <li>
             <label for="user-name">Name: </label>
-            <select name="user" id="user_id">
+            <select name="name" id="user_id">
                 <option value="placeholder">Select Name</option>
                 {% for user in all_users %}
                 <option value="{{user.name}}">{{user.name}}</option>

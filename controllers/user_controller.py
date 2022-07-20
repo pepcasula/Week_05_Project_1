@@ -44,14 +44,14 @@ def add_new_user():
     user_repository.save(new_user)
     return render_template("user_info/new.html", new_user=new_user)
 
-@users_blueprint.route("/user_info/edit", methods=['UPDATE'])
+@users_blueprint.route("/user_info/edit", methods=['POST'])
 def edit_user():
     username = request.form['name']
     usertype = request.form['type']
     userid = request.form['user_id']
     edit_user = User(username, usertype, userid)  
     user_repository.update(edit_user)
-    return render_template("user_info/edit.html")
+    return render_template("user_info/edit.html", edit_user=edit_user)
 
 
     
