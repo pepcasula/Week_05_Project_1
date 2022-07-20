@@ -49,7 +49,6 @@ def select_all_by_product(id):
     sql = "SELECT * FROM bugs WHERE product_id = %s"
     values = [id]
     results = run_sql(sql, values)
-
     for row in results:
         product = product_repository.select(row["product_id"])
         bug = Bug(row['short_name'], row['description'], product.name, row['first_reported'], row['id'])

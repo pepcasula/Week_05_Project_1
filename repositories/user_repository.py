@@ -14,7 +14,7 @@ def save(user):
     values = [
         user.name,
         user.user_type
-        ]
+    ]
     results = run_sql(sql, values)
     id = results[0]['id']
     user.id = id
@@ -37,3 +37,5 @@ def select(id):
     if result is not None:
         user = User(result['name'], result['user_type'], result['id'])
         return user 
+
+    
