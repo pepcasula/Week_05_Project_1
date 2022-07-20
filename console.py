@@ -50,6 +50,7 @@ product_repository.save(product3)
 product4 = Product("OmniConverter")
 product_repository.save(product4)
 
+
 bug1 = Bug(
     "Not showing PDF preview",
     "PDF preview does not show in Icon View when program is in Desktop mode.",

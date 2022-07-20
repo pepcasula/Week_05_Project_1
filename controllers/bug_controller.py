@@ -24,3 +24,13 @@ def get_by_product():
     all_bugs = bug_repository.select_all_by_product(product)
     return render_template("/bug_info/by_product.html", all_bugs = all_bugs)
 
+@bugs_blueprint.route("/bug_info/new", methods=['POST'])
+def add_new_bug():
+    bugname = request.form['short_name']
+    bugdescription = request.form['description']
+    bugproduct = request.form['product_id']
+    bugdate = request.form['first_reported']
+    new_bug = Bug(bugname, bugdescription, bugproduct, bugdate)
+    bug_repository.save(new_bug)
+    return render_template("bug_info/new.html", new_bug = new_bug)
+

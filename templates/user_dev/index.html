@@ -11,9 +11,37 @@
     <h3>Bugs</h3>
         <h4>Add new Bug</h4> 
         
-        <form>
+            <form action="bug_info/new" method="post">
+                <ul>
 
-        </form>
+                    <li>
+                        <label for="bug-name">Short Description: </label>
+                        <input type="text" name="short_name" id="bug-name">
+                    </li>
+
+                    <li>
+                        <label for="bug-description">Details: </label>
+                        <input type="text" name="description" id="bug-description">
+                    </li>
+
+                    <li>
+                        <label for="bug-product">Product: </label>
+                        <select name="product_id" id="bug-product">
+                            <option value="1">GeniusPDF</option>
+                            <option value="2">Diamond Scan</option>
+                            <option value="3">docuMental</option>
+                            <option value="4">Omniconverter</option>
+                        </select>    
+                    </li>
+
+                    <li>
+                        <label for="bug-date">Date: </label>
+                        <input type="text" name="first_reported" id="bug-date">
+                    </li>
+
+                </ul>
+                <button>Submit</button>
+            </form>
 
     <h3>Products</h3>
 
@@ -27,29 +55,11 @@
                     </li>
                 </ul>
                 <button>Submit</button>
-            </form>
-
-        <h4>Edit Product</h4>
-
-
-        
-            <form action="" method="post">
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <button>Submit</button>
-            </form>
-
-
-
-
-
-
-
-    <ul> 
-        <li><a href="../product_info">See all Products</a></li>
-        <li><a href="/">Back to the Home Page</a></li>
-    </ul>
+        </form>
+    
+        <ul> 
+            <li><a href="../product_info">See all Products</a></li>
+            <li><a href="/">Back to the Home Page</a></li>
+        </ul>
 
 {% endblock %}

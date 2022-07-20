@@ -4,7 +4,7 @@
     <h2>See all Bugs reported</h2>
     <ul>
     {% for bug in all_bugs %}
-            <li>{{ bug.id }} | {{ bug.product }} | {{ bug.short_name }} | First reported on {{ bug.first_reported }}</li>
+            <li>{{ bug.id }}.  {{ bug.product }}  |  {{ bug.short_name }}  |  First reported on {{ bug.first_reported }} </li>
     {% endfor %}
     </ul>
 {% endblock %}

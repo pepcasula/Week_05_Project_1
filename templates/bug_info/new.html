@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>A new product <i>{{ new_product.name }}</i> was created.</h2>
+    <h2>A new Bug Technote<i>n. {{ new_bug.id }}_{{ new_bug.first_submitted}}</i> was created.</h2>
 
     <ul>
-        <li><a href="/product_info">See all Products</a></li>
+        <li><a href="/bug_info">See all Bugs</a></li>
         <li><a href="/user_dev">Back to Developers Menu</a></li>
         <li><a href="/">Home</a></li>
     </ul>

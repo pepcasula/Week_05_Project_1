@@ -54,4 +54,4 @@ def select_all_by_product(id):
         bug = Bug(row['short_name'], row['description'], product.name, row['first_reported'], row['id'])
         bugs.append(bug)
     return bugs
-       
+
