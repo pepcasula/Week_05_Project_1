@@ -20,44 +20,41 @@
             </select>
         </li>
     </ul>
-        <button>Submit</button>
+    
+    <button>Submit</button>
+    
     </form>
    
-
     <h3>Edit User</h3>
 
-    
-    <!-- Should the methof for the form be 'update' rather than 'post'?? -->
-    <form action="user_info/edit" method="post">
-        <input type="hidden" value="{{user_id}}" name="user_id"/>
-    <ul>
-        <li>
-            <label for="user-name">Name: </label>
-            <select name="name" id="user_id">
-                <option value="placeholder">Select Name</option>
-                {% for user in all_users %}
-                <option value="{{user.name}}">{{user.name}}</option>
-                {% endfor %}
-            </select>
-        </li>
-        <li>
-            <label for="user-type">Access Level: </label>
-            <select name="type" id="user-type">
-                <option value="placeholder">Select Type</option>
-                <option value="Tech Support">Tech Support</option>
-                <option value="Developer">Developer</option>
-                <option value="Admin">System Admin</option>
-            </select>
-        </li>
-    </ul>
-        <button>Submit</button>
-    </form>
-
+        <form action="user_info/edit" method="post">
+            <input type="hidden" value="{{user_id}}" name="user_id"/>
+        <ul>
+            <li>
+                <label for="user-name">Name: </label>
+                <select name="name" id="user_id">
+                    <option value="placeholder">Select Name</option>
+                    {% for user in all_users %}
+                    <option value="{{user.name}}">{{user.name}}</option>
+                    {% endfor %}
+                </select>
+            </li>
+            <li>
+                <label for="user-type">Access Level: </label>
+                <select name="type" id="user-type">
+                    <option value="placeholder">Select Type</option>
+                    <option value="Tech Support">Tech Support</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Admin">System Admin</option>
+                </select>
+            </li>
+        </ul>
+            <button>Submit</button>
+        </form>
 
     <ul> 
         <li><a href="../user_info">See all Users</a></li>
         <li><a href="/">Back to the Home Page</a></li>
     </ul>
-
 
 {% endblock %}

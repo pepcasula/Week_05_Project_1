@@ -1,15 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Developer Menu</h2>
+    <h2>Developer Menu</h2>
 
-<ul>
-    <li>See/edit your tickets: [FORM FIELD: select user]</li>
-    <li><a href="/ticket">View all Tickets</a></li>
-    <li><a href="/bug_info">View/Edit Bug Info</a></li>        
-    <li><a href="/">Create new Bug Info</a></li>
-    <li><a href="/product_info">View/Edit Products</a></li>
-    <li><a href="/">Create new Product Info</a></li>
-</ul>
+    <h3>Tickets</h3>
+        <ul>
+            <li><a href="/ticket">View/Edit Tickets</a></li>
+        </ul>
+
+    <h3>Bugs</h3>
+        <h4>Add new Bug</h4> 
+        
+        <form>
+
+        </form>
+
+    <h3>Products</h3>
+
+        <h4>Add new Product</h4>
+
+            <form action="product_info/new" method="post">
+                <ul>
+                    <li>
+                        <label for="product-name">Name: </label>
+                        <input type="text" name="name" id="product-name">
+                    </li>
+                </ul>
+                <button>Submit</button>
+            </form>
+
+        <h4>Edit Product</h4>
+
+
+        
+            <form action="" method="post">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button>Submit</button>
+            </form>
+
+
+
+
+
+
+
+    <ul> 
+        <li><a href="../product_info">See all Products</a></li>
+        <li><a href="/">Back to the Home Page</a></li>
+    </ul>
 
 {% endblock %}

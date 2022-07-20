@@ -17,4 +17,9 @@ def get_all_products():
     all_products = product_repository.select_all()
     return render_template("product_info/index.html", all_products = all_products)
 
-
+@products_blueprint.route("/product_info/new", methods=['POST'])
+def add_new_product():
+    productname = request.form['name']
+    new_product = Product(productname)
+    product_repository.save(new_product)
+    return render_template("product_info/new.html", new_product=new_product)
