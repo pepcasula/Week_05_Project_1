@@ -29,10 +29,10 @@ def get_all_users():
     all_users = user_repository.select_all()
     return render_template("user_info/index.html", all_users = all_users)
 
-@users_blueprint.route("/user_info/new")
+@users_blueprint.route("/user_info/new", methods=['POST'])
 def add_new_user():
-    username = request.form['user-name']
-    usertype = request.form['user-type']
+    username = request.form['name']
+    usertype = request.form['type']
     new_user = User(username, usertype)
     user_repository.save(new_user)
-    return render_template("user_info/index.html")
+    return render_template("user_info/new.html", new_user=new_user)
