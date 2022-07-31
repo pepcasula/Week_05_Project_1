@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">    
     <title>Bug Reporting</title>
 </head>
 <body>
+    <header>
+        <div id="logos">
+            <img src="/images/logo1.png" width="283" height="30">
+            <img src="/images/logo2.png" width="201" height="38">
+        </div>
+    </header>
+
+    <nav id="headnav">
+        <a href="">Homepage</a>
+        <a href="">Tech Support Menu</a>
+        <a href="">Developers Menu</a>
+    </nav>        
+
+    <main>
+
     {% block content %}
 
     {% endblock %}
+
+        <aside>
+            <h3>Bugs info</h3>
+            <ul>
+                <li><a href="/bug_info">See all bugs</a></li>
+                <li>
+                    <form action="/bug_info/by_product" method="post">
+                        <label for="products">Find by product:<br></label>
+                        <select id="products" name="product">
+                        <option value="1">GeniusPDF</option>
+                        <option value="2">Diamond Scan</option>
+                        <option value="3">docuMental</option>
+                        <option value="4">Omniconverter</option>
+                        </select>
+                        <input type="submit">
+                    </form>
+                </li>
+            </ul>
+            <h3>Product info</h3>
+            <ul>
+                <li><a href="/bug_info">See all bugs</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>BOB Office is a trademark of BOB Technologies Scotland.</p>
+        <p>Bug Reporting System 0.0</p>
+    </footer>
+
 </body>
 </html>

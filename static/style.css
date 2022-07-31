@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body > header {
+    padding: 16px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+body > header > nav > ul > li > a {
+    color: white;
+}
+
+#logos {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#headnav {
+    background-color: dodgerblue;
+    padding: 8px;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+#headnav > a {
+    text-decoration: none;
+    color: white;
+}
+
+#headnav > a:visited {
+    text-decoration: none;
+    color: white;
+}
+  
+#headnav > a:hover {
+    text-decoration: none;
+    color: black;
+}
+  
+#headnav > a:active {
+    text-decoration: none;
+    color: cyan;
+}
+
+body > main {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+body > main > article {
+    flex: 70%;
+}
+
+body > main > aside {
+    flex: 15%;    
+}
+
+body > footer {
+    color: white;
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+             
