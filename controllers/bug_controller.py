@@ -34,5 +34,5 @@ def add_new_bug():
     bugdate = request.form['first_reported']
     new_bug = Bug(bugname, bugdescription, bugproduct_id, bugdate)
     bug_repository.save(new_bug)
-    return render_template("bug_info/new.html", new_bug = new_bug)
+    return render_template("/bug_info/new.html", new_bug = new_bug)
 

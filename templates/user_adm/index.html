@@ -1,59 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>System Admin Menu</h2>
+    <article>
 
-<h3>Create New User</h3>
-    
-    <form action="user_info/new" method="post">
-    <ul>
-        <li>
-            <label for="user-name">Name: </label>
-            <input type="text" name="name" id="user-name">
-        </li>
-        <li>
-            <label for="user-type">Access Level: </label>
-            <select name="type" id="user-type">
-                <option value="Tech Support">Tech Support</option>
-                <option value="Developer">Developer</option>
-                <option value="Admin">System Admin</option>
-            </select>
-        </li>
-    </ul>
-    
-    <button>Submit</button>
-    
-    </form>
-   
-    <h3>Edit User</h3>
+        <main>
 
-        <form action="user_info/edit" method="post">
-            <input type="hidden" value="{{user_id}}" name="user_id"/>
-        <ul>
-            <li>
-                <label for="user-name">Name: </label>
-                <select name="name" id="user_id">
-                    <option value="placeholder">Select Name</option>
-                    {% for user in all_users %}
-                    <option value="{{user.name}}">{{user.name}}</option>
-                    {% endfor %}
-                </select>
-            </li>
-            <li>
-                <label for="user-type">Access Level: </label>
-                <select name="type" id="user-type">
-                    <option value="Tech Support">Tech Support</option>
-                    <option value="Developer">Developer</option>
-                    <option value="Admin">System Admin</option>
-                </select>
-            </li>
-        </ul>
-            <button>Submit</button>
-        </form>
+            <h2>System Admin Menu</h2>
+            <h3 style="color: dodgerblue"><br>Create New User</h3>
+        
+            <form action="user_info/new" method="post">
+                <ul>
+                    <li>
+                        <label for="user-name">Name: </label>
+                        <input type="text" name="name" id="user-name">
+                    </li>
+                    <li>
+                        <label for="user-type">Access Level: </label>
+                        <select name="type" id="user-type">
+                            <option value="Tech Support">Tech Support</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Admin">System Admin</option>
+                        </select>
+                    </li>
+                </ul>
+                <button>Submit</button>
+            </form>
 
-    <ul> 
-        <li><a href="../user_info">See all Users</a></li>
-        <li><a href="/">Back to the Home Page</a></li>
-    </ul>
+            <h3 style="color: dodgerblue"><br>Edit User</h3>
+
+            <form action="user_info/edit" method="post">
+                <input type="hidden" value="{{user_id}}" name="user_id"/>
+                <ul>
+                    <li>
+                        <label for="user-name">Name: </label>
+                        <select name="name" id="user_id">
+                            <option value="placeholder">Select Name</option>
+                            {% for user in all_users %}
+                            <option value="{{user.name}}">{{user.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                    <li>
+                        <label for="user-type">Access Level: </label>
+                        <select name="type" id="user-type">
+                            <option value="Tech Support">Tech Support</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Admin">System Admin</option>
+                        </select>
+                    </li>
+                </ul>
+                    <button>Submit</button>
+            </form>
+
+            <ul> 
+                <li><a href="../user_info"><br><br>See all Users</a></li>
+                <li><a href="/">Back to the Home Page</a></li>
+            </ul>
+
+        </main>
+
+    </article>
 
 {% endblock %}

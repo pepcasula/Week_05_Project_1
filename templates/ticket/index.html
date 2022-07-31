@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>View/Edit tickets</h2>
-        <a href="/">Sort by User [selection menu]</a>
-        <a href="/">Sort by Bug [selection menu]</a>
-        <a href="/">Sort by Product [selection menu]</a>
+    <article>
+        <main>
+            <h2>View tickets</h2>
         
+        {% for ticket in all_tickets %}
+            <ul>
+                <li>Ticket ref. n. {{ ticket.id }}</li>
+                <li>Created on {{ ticket.date_subm}}</li>
+                <li>Product: {{ ticket.product }}</li>
+                <li>Bug: {{ ticket.bug }}</li>
+                <li>User: {{ ticket.user }}</li>
+                <li>Status: {{ ticket.ticket_status }}</li>
+                <li><a href="/">Edit ticket</a></li>        
+            </ul>
+        {% endfor %}
+
+        </main>
+    </article>
+
     
-    {% for ticket in all_tickets %}
-        <ul>
-            <li>Ticket ref. n. {{ ticket.id }}</li>
-            <li>Created on {{ ticket.date_subm}}</li>
-            <li>Product: {{ ticket.product }}</li>
-            <li>Bug: {{ ticket.bug }}</li>
-            <li>User: {{ ticket.user }}</li>
-            <li>Status: {{ ticket.ticket_status }}</li>
-            <li><a href="/">Edit ticket</a></li>        
-        </ul>
-    {% endfor %}
-    </ul>
 {% endblock %}

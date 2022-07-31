@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Products</h2>
+<article>
 
-    <ul>
-        {% for product in all_products %}
-            <li>{{ product.id }} - {{ product.name }}</li>
-        {% endfor %}
-    </ul>
+    <main>
+        <br><h2>Products</h2>
+
+        <ul>
+            {% for product in all_products %}
+                <li><br>{{ product.id }} - {{ product.name }}</li>
+            {% endfor %}
+        </ul>    
+    </main>
+
+</article>
+
 {% endblock %}

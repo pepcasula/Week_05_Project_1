@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>New <i>{{ new_user.user_type }}</i> User '{{ new_user.name }}' created.</h2>
+    <article>
+        
+        <main>
 
-    <ul>
-        <li><a href="/user_adm">System Admin Menu</a></li>
-        <li><a href="/">Home</a></li>
-    </ul>
+            <h2>New <i>{{ new_user.user_type }}</i> User '{{ new_user.name }}' created.</h2>
+
+            <ul>
+                <li><a href="/user_adm">System Admin Menu</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </main>
+
+    </article>
+
 {% endblock %}

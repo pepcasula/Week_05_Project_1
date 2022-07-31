@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <article>
 
+        <main>
 
+            <br><h2>A new product <i>{{ new_product.name }}</i> was created.</h2>
 
+            <ul>
+                <li><a href="/product_info">See all Products</a></li>
+                <li><a href="/user_dev">Back to Developers Menu</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+                    
+        </main>
 
-
-
-    <h2>A new product <i>{{ new_product.name }}</i> was created.</h2>
-
-    <ul>
-        <li><a href="/product_info">See all Products</a></li>
-        <li><a href="/user_dev">Back to Developers Menu</a></li>
-        <li><a href="/">Home</a></li>
-    </ul>
+    </article>
 
 {% endblock %}
